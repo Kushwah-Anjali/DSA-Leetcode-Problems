@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 public class two_Sum_LC1 {
     public static void main(String args[]) {
-        int nums[] = { 2, 7, 11, 15 };
+        int nums[] = {  7, 11, 15 };
         int target = 18;
         // int result[] = twoSum(nums, target);
         int result[] = hashtwoSum(nums, target);
@@ -33,7 +33,7 @@ public class two_Sum_LC1 {
     // using hashmap optimization
     static int[] hashtwoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
+                for (int i = 0; i < nums.length; i++) {
             int need = target - nums[i];
             if (map.containsKey(need)) {
                 return new int[] { map.get(need), i };
